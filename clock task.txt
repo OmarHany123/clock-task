@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+#include<windows.h>
+
+using namespace std;
+
+int main()
+{
+    int hrs, _min, sec;
+    cout << "Enter the Hours : ";
+    cin >> hrs;
+    cout << "Enter the Minuts : ";
+    cin >> _min;
+    cout << "Enter the Seconds : ";
+    cin >> sec;
+    while(1){
+        system("cls");
+        if(sec > 59){
+            _min++;
+            sec = 0;
+        }
+        if(_min > 59){
+            hrs++;
+            _min = 0;
+        }
+        if(hrs > 23){
+            hrs = 0;
+        }
+        cout << "************"<<endl;
+        cout << hrs << " : " << _min << " : " << sec << endl;
+        cout << "************"<<endl;
+        sec++;
+        Sleep(1000);
+    }
+    return 0;
+}
